@@ -1,0 +1,72 @@
+﻿@model FacultyAppointmentSystem.ViewModels.ServProAppVM
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detajet</h2>
+
+<div>
+    <h4>Lenda</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.serviceProvider.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.serviceProvider.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.serviceProvider.Id)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.serviceProvider.Id)
+        </dd>
+    </dl>
+</div>
+
+<caption><h4>All Appointments for @Html.DisplayFor(model => model.serviceProvider.Name)</h4></caption>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.appointment.Orari)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.appointment.Pershkrimi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.appointment.dega_id)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model.appointments)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Orari)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pershkrimi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.dega_id)
+            </td>
+
+            <td>
+                <button class="btn btn-info"> @Html.ActionLink("Edit", "Edit", new { id = item.Id })</button> |
+                <button class="btn btn-default">@Html.ActionLink("Details", "Details", new { id = item.Id })</button> |
+                <button class="btn btn-warning">@Html.ActionLink("Delete", "Delete", new { id = item.Id })</button>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+
+<div>
+    <button class="btn btn-info">@Html.ActionLink("Edit", "Edit", new { id = Model.serviceProvider.Id }) </button>
+    <a asp-action="Index" class="btn btn-default">Back to List</a>
+</div>
+

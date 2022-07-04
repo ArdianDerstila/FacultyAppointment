@@ -1,0 +1,61 @@
+﻿@model FacultyAppointmentSystem.Models.Appointment
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Appointment</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Orari)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Orari)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Pershkrimi)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Pershkrimi)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.dega_id)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.dega_id)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.lenda_id)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.lenda_id)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Dega)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Dega)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Lendet)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Lendet)
+        </dd>
+    </dl>
+</div>
+<div>
+    <button class="btn btn-info">@Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |</button>
+    <a asp-action="Index" class="btn btn-default">Back to List</a>
+</div>

@@ -1,0 +1,56 @@
+﻿@model FacultyAppointmentSystem.Models.Appointment
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<h4>Cakto orarin</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Orari" class="control-label"></label>
+                <input asp-for="Orari" class="form-control" />
+                <span asp-validation-for="Orari" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Pershkrimi" class="control-label"></label>
+                <input asp-for="Pershkrimi" class="form-control" />
+                <span asp-validation-for="Pershkrimi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="dega_id" class="control-label"></label>
+                <input asp-for="dega_id" class="form-control" />
+                <span asp-validation-for="dega_id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="lenda_id" class="control-label"></label>
+                <input asp-for="lenda_id" class="form-control" />
+                <span asp-validation-for="lenda_id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Dega" class="control-label"></label>
+                <input asp-for="Dega" class="form-control" />
+                <span asp-validation-for="Dega" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Lendet" class="control-label"></label>
+                <input asp-for="Lendet" class="form-control" />
+                <span asp-validation-for="Lendet" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-success" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index" class="btn btn-default">Back to List</a>
+</div>
+
